@@ -476,7 +476,7 @@ swaggerui_blueprint = get_swaggerui_blueprint(
     SWAGGER_URL,
     API_URL,
     config={
-        'app_name': "API de Transferências"
+        'app_name': "API de Competição"
     }
 )
 
@@ -486,8 +486,8 @@ app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 @app.route('/api/spec')
 def swagger_spec():
     swag = swagger(app)
-    swag['info']['title'] = 'API de Transferências'
-    swag['info']['description'] = 'API para gerenciamento de transferências de jogadores entre times'
+    swag['info']['title'] = 'API de Competição'
+    swag['info']['description'] = 'API para gerenciamento de jogadores, times, partidas, transferências e torneio.'
     swag['info']['version'] = '1.0'
     swag['basePath'] = '/'
     
@@ -1455,7 +1455,7 @@ if __name__ == "__main__":
 # Para isso, basta executar o seguinte comando no terminal dentro do diretório 
 # em que o arquivo da sua aplicação se encontra:
     
-# python nome_do_arquivo.py
+# python api_with_swagger.py
 
 # Substitua nome_do_arquivo pelo nome do arquivo da sua aplicação.
 # Depois de executar a sua aplicação, abra o navegador e acesse o seguinte endereço:
